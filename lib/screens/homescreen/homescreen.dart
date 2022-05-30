@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screens/homescreen/appdrawer.dart';
 import 'package:flutter_application_3/screens/homescreen/singlepro.dart';
 
 // ignore: camel_case_types
@@ -10,8 +11,8 @@ class homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 216, 213, 213),
-      drawer: const Drawer(),
+      backgroundColor: Colors.blueGrey.shade50,
+      drawer: appdrawer(),
       appBar: AppBar(
           iconTheme: const IconThemeData(color: Colors.black),
           title: const Text("Home"),
@@ -106,7 +107,7 @@ class homescreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Herbs Seasonings",
+                    "Pizzas",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   //Icon(Icons.arrow_forward_ios),
@@ -120,7 +121,9 @@ class homescreen extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: [singlepro(), singlepro(), singlepro()],
+                children: [
+                  box("pizza.png")
+                ],
               ),
             ),
             Padding(
@@ -143,7 +146,7 @@ class homescreen extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: [singlepro(), singlepro(), singlepro()],
+                children: [],
               ),
             ),
             Padding(
@@ -166,7 +169,7 @@ class homescreen extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: [singlepro(), singlepro(), singlepro()],
+                children: [],
               ),
             ),
           ],
