@@ -101,6 +101,7 @@ class homescreen extends StatelessWidget {
                 ],
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
@@ -118,11 +119,15 @@ class homescreen extends StatelessWidget {
                 ],
               ),
             ),
+           
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  box("pizza.png")
+                  box("pizza.png", "Margarita Pizza", "110₹", "22.5 CM"),
+                  box("pizza2.png", "Onions Pizza", "150₹", "22.5 CM"),
+                  box("pizza3.png", "Cheezy-7 Pizza", "190₹", "22.5 CM"),
+                  box("pizza4.png", "Jalapenos Pizza", "220₹", "22.5 CM")
                 ],
               ),
             ),
@@ -132,7 +137,7 @@ class homescreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Herbs Seasonings",
+                    "Burger",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   //Icon(Icons.arrow_forward_ios),
@@ -146,7 +151,12 @@ class homescreen extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: [],
+                children: [
+                  box("burger1.png", "Allo Tikki Burger", "50₹", "1 Pec."),
+                  box("burger2.png", "veggie Burger", "90", "1 Pec."),
+                  box("burger3.png", "Maharaja Burger", "130", "1 Pec."),
+                  box("burger1.png", "spicy paneer burger", "110", "1 Pec.")
+                ],
               ),
             ),
             Padding(
@@ -155,7 +165,7 @@ class homescreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Herbs Seasonings",
+                    "Coffee",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   //Icon(Icons.arrow_forward_ios),
@@ -169,7 +179,13 @@ class homescreen extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: [],
+                children: [
+                  box("coffee1.png", "Cholote Cold Coffee", "90₹", "1 Pec."),
+                  box("coffee2.png", "Cappuccino", "110₹", "1 Pec."),
+                  box("coffee3.png", "mocha", "145₹", "1 Pec."),
+                  box("coffee4.png", "Frappuccino", "180₹", "1 Pec."),
+                  box("coffee5.png", "Espresso", "75₹", "1 Pec.")
+                ],
               ),
             ),
           ],

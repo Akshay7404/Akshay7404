@@ -1,7 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, prefer_interpolation_to_compose_strings, avoid_web_libraries_in_flutter, unused_import
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, prefer_interpolation_to_compose_strings, avoid_web_libraries_in_flutter, unused_import, non_constant_identifier_names, use_function_type_syntax_for_parameters
+import 'dart:core';
+
 import 'package:flutter/material.dart';
 
-Widget box(String img,) {
+ 
+
+Widget box(String img, String name, String Prise,String cm) {
   return Container(
     margin: EdgeInsets.only(right: 8, bottom: 8, top: 8),
     height: 230,
@@ -18,6 +22,7 @@ Widget box(String img,) {
                   image: DecorationImage(
                       image: Image.asset("assest/$img").image))),
         ),
+        
         Expanded(
             child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -25,14 +30,14 @@ Widget box(String img,) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Margarita Pizza",
+                name,
                 style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "110₹/22.5 CM",
+                cm,
                 style: TextStyle(
                     fontSize: 15,
                     color: Colors.grey,
@@ -50,7 +55,7 @@ Widget box(String img,) {
                         borderRadius: BorderRadius.circular(10)),
                     child: Row(children: [
                       Expanded(
-                        child: Text("22.5 CM",
+                        child: Text(Prise,
                             style: TextStyle(
                                 color: Colors.red,
                                 fontWeight: FontWeight.bold)),
@@ -89,4 +94,7 @@ Widget box(String img,) {
       ],
     ),
   );
+}
+
+onTap() {
 }
