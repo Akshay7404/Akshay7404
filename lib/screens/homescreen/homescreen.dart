@@ -14,6 +14,7 @@ class homescreen extends StatelessWidget {
       backgroundColor: Colors.blueGrey.shade50,
       drawer: appdrawer(),
       appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent,
           iconTheme: const IconThemeData(color: Colors.black),
           title: const Text("Home"),
           actions: [
@@ -36,7 +37,6 @@ class homescreen extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.only(bottom: 8),
-              height: 150,
               decoration: BoxDecoration(
                   color: Colors.yellowAccent,
                   image: DecorationImage(
@@ -101,7 +101,6 @@ class homescreen extends StatelessWidget {
                 ],
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
@@ -119,15 +118,17 @@ class homescreen extends StatelessWidget {
                 ],
               ),
             ),
-           
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  box("pizza.png", "Margarita Pizza", "110₹", "22.5 CM"),
-                  box("pizza2.png", "Onions Pizza", "150₹", "22.5 CM"),
-                  box("pizza3.png", "Cheezy-7 Pizza", "190₹", "22.5 CM"),
-                  box("pizza4.png", "Jalapenos Pizza", "220₹", "22.5 CM")
+                  box("pizza.png", "Margarita Pizza", "110₹", "22.5 CM",
+                      context),
+                  box("pizza2.png", "Onions Pizza", "150₹", "22.5 CM", context),
+                  box("pizza3.png", "Cheezy-7 Pizza", "190₹", "22.5 CM",
+                      context),
+                  box("pizza4.png", "Jalapenos Pizza", "220₹", "22.5 CM",
+                      context)
                 ],
               ),
             ),
@@ -152,10 +153,13 @@ class homescreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  box("burger1.png", "Allo Tikki Burger", "50₹", "1 Pec."),
-                  box("burger2.png", "veggie Burger", "90", "1 Pec."),
-                  box("burger3.png", "Maharaja Burger", "130", "1 Pec."),
-                  box("burger1.png", "spicy paneer burger", "110", "1 Pec.")
+                  box("burger1.png", "Allo Tikki Burger", "50₹", "1 Pec.",
+                      context),
+                  box("burger2.png", "veggie Burger", "90", "1 Pec.", context),
+                  box("burger3.png", "Maharaja Burger", "130", "1 Pec.",
+                      context),
+                  box("burger1.png", "spicy paneer burger", "110", "1 Pec.",
+                      context)
                 ],
               ),
             ),
@@ -180,11 +184,12 @@ class homescreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  box("coffee1.png", "Cholote Cold Coffee", "90₹", "1 Pec."),
-                  box("coffee2.png", "Cappuccino", "110₹", "1 Pec."),
-                  box("coffee3.png", "mocha", "145₹", "1 Pec."),
-                  box("coffee4.png", "Frappuccino", "180₹", "1 Pec."),
-                  box("coffee5.png", "Espresso", "75₹", "1 Pec.")
+                  box("coffee1.png", "Cholote Cold Coffee", "90₹", "1 Pec.",
+                      context),
+                  box("coffee2.png", "Cappuccino", "110₹", "1 Pec.", context),
+                  box("coffee3.png", "mocha", "145₹", "1 Pec.", context),
+                  box("coffee4.png", "Frappuccino", "180₹", "1 Pec.", context),
+                  box("coffee5.png", "Espresso", "75₹", "1 Pec.", context)
                 ],
               ),
             ),
